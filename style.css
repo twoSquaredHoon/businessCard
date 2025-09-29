@@ -1,0 +1,29 @@
+body {
+    min-height: 10000vh;
+    /* 200% of viewport height = guaranteed scroll */
+}
+
+#caseClosed {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#caseOpened {
+    opacity: 0;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#card {
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+}
+
