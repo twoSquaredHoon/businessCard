@@ -1,7 +1,7 @@
 /* TODO Add background */
 
 body {
-    min-height: 10000vh;
+    min-height: 1000vh;
     /* 200% of viewport height = guaranteed scroll */
 }
 
@@ -29,15 +29,175 @@ body {
     width: 600px;
 }
 
+/* About button and it's functions */
+#aboutButton {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 100;
+}
+
 #popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 40px;
-      border-radius: 10px;
-      width: 400px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 200;
+    cursor: move;
+    user-select: none;
+}
+
+#popup.dragging {
+    cursor: grabbing;
+    transition: none;
+}
+
+#aboutButton.visible {
+    bottom: 100px;
+    /* Show above bottom of screen */
+    opacity: 1;
+}
+
+#contactsButton {
+    position: fixed;
+    bottom: -100px;
+    left: 35%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 100;
+}
+
+#contactsButton.visible {
+    bottom: 100px;
+    opacity: 1;
+}
+
+#worksButton {
+    position: fixed;
+    bottom: -100px;
+    left: 65%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 100;
+}
+
+#worksButton.visible {
+    bottom: 100px;
+    opacity: 1;
+}
+
+#contactsPopup,
+#worksPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 200;
+    cursor: move;
+    user-select: none;
+}
+
+#contactsPopup.dragging,
+#worksPopup.dragging {
+    cursor: grabbing;
+}
+
+#contactsPopup h2,
+#worksPopup h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#contactsPopup p,
+#worksPopup p {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+#closeContactsPopup,
+#closeWorksPopup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+#closeContactsPopup:hover,
+#closeWorksPopup:hover {
+    color: #333;
+}
+
+#closePopup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+#closePopup:hover {
+    color: #333;
+}
+
+/*
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 199;
+}
+*/
+#popup h2,
+#popup p {
+    color: #333;
+    margin-bottom: 10px;
+}
