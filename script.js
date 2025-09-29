@@ -1,6 +1,7 @@
 const caseClosed = document.getElementById("caseClosed");
 const caseOpened = document.getElementById("caseOpened");
 
+// Scroll Animation
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY
     const fadeDistance = 300;
@@ -19,17 +20,17 @@ window.addEventListener("scroll", () => {
         card.style.opacity = 0;
     } else if (window.scrollY >= 4000 && window.scrollY < 5000) {
         caseClosed.style.opacity = 0;
-        caseOpened.style.transition = 'opacity 0.5s ease'; 
+        caseOpened.style.transition = 'opacity 0.5s ease';
         card.style.opacity = 0;
-        
+
         let opacity = 1 - ((window.scrollY - fadeStart) / fadeDistance);
         if (opacity < 0) opacity = 0;
         if (opacity > 1) opacity = 1;
 
         caseOpened.style.opacity = opacity;
     } else {
-        caseClosed.style.opactiy = 0;
-        caseOpened.style.opactiy = 0;
+        caseClosed.style.opacity = 0;
+        caseOpened.style.opacity = 0;
     }
 
     if (window.scrollY >= cardSlideStart) {
@@ -43,6 +44,16 @@ window.addEventListener("scroll", () => {
         card.style.top = '-50%';
         card.style.opacity = 0;
     }
-
 });
 
+/* TODO
+ Button functions
+ Make it moveable
+ like background and internet tabs
+*/
+const aboutButton = document.getElementById("aboutButton");
+const popup = document.getElementById("popup");
+
+aboutButton.addEventListener("click", () => {
+    popup.style.display = "block";
+});

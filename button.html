@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Button Test</title>
+  <style>
+    #popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <button id="aboutButton">ABOUT</button>
+  
+  <div id="popup">
+    <p>Phone: (123) 456-7890</p>
+  </div>
+
+  <script>
+    const aboutButton = document.getElementById("aboutButton");
+    const popup = document.getElementById("popup");
+
+    aboutButton.addEventListener("click", () => {
+      popup.style.display = "block";
+    });
+  </script>
+</body>
+</html>

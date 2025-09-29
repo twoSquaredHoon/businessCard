@@ -1,3 +1,5 @@
+/* TODO Add background */
+
 body {
     min-height: 10000vh;
     /* 200% of viewport height = guaranteed scroll */
@@ -27,3 +29,15 @@ body {
     width: 600px;
 }
 
+#popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
