@@ -17,27 +17,50 @@
     </header>
 
     <main>
+        <!--
+        <video autoplay muted loop playsinline id="introVideo">
+            <source src="assets/intro.mp4" type="video/quicktime">
+            Your browser does not support the video tag.
+        </video>
+        -->
+
+
+        <video autoplay muted playsinline id="introGif">
+            <source src="assets/intro2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
         <img id="businessCard" src="assets/final bus card.png" alt="Business Card">
 
         <span id="aboutLabel">About</span>
-        <span id="contactsLabel">Contacts</span>
+        <span id="contactsLabel">Contact Me!</span>
         <span id="worksLabel">Works</span>
 
-        <button id="aboutButton"><img src="assets/IMG_0826.png" alt="ABOUT"></button>
+        <button id="aboutButton"><img src="assets/aboutImage.png" alt="ABOUT"></button>
         <div id="aboutPopup">
             <!-- &times renders the x button-->
             <button id="closeAboutButton">&times;</button>
             <p>Hello, you have reached Seunghoon's personal website.</p>
         </div>
 
-        <button id="contactsButton"><img src="assets/monkeyCall.png" alt="CONTACTS"></button>
+        <button id="contactsButton"><img src="assets/contactsImage.png" alt="CONTACTS"></button>
         <div id="contactsPopup">
             <button id="closeContactsButton">&times</button>
-            <p>email: </p>
-            <p>tel: </p>
+            <p>email: twoSquaredHoon@gmail.com</p>
+            <form id="contactForm">
+                <input type="text" id="nameInput" name="name" placeholder="Your name" required>
+                <input type="text" id="emailInput" name="email" placeholder="Your email" required>
+                <input type="text" id="subjectInput" name="subject" placeholder="subject" required>
+
+                <label for="messageInput">Message:</label>
+                <textarea id="messageInput" name="message" placeholder="Write your message..." rows="5"
+                    required></textarea>
+
+                <button type="submit" id="sendButton">Send</button>
+            </form>
         </div>
 
-        <button id="worksButton"><img src="assets/Enchanted_Book.gif" alt="WORKS"></button>
+        <button id="worksButton"><img src="assets/worksImage.png" alt="WORKS"></button>
         <div id="worksPopup">
             <button id="closeWorksButton">&times;</button>
             <h2>WORKS</h2>
@@ -50,7 +73,8 @@
                 <strong>"Dirthouse"</strong> within <em>Minecraft</em>, emphasizing <strong>resource
                     efficiency</strong>, <strong>early-game shelter optimization</strong>, and <strong>aesthetic
                     simplicity</strong>. The project demonstrates adaptability, creative problem-solving, and mastery of
-                limited materials under survival constraints.</p>
+                limited materials under survival constraints.
+            </p>
 
             <p><strong>Key Features:</strong></p>
             <ul>
@@ -68,9 +92,9 @@
                 translating to real-world problem-solving, optimization, and design thinking skills.</p>
 
             <p>project2</p>
-                <div class="resize-handle resize-right"></div>
-    <div class="resize-handle resize-bottom"></div>
-    <div class="resize-handle resize-corner"></div>
+            <div class="resize-handle resize-right"></div>
+            <div class="resize-handle resize-bottom"></div>
+            <div class="resize-handle resize-corner"></div>
         </div>
     </main>
 

@@ -211,8 +211,8 @@ function openWorksPopup() {
         return;
     }
     worksPopup.style.display = "block";
-    worksPopup.style.left = "20%";
-    worksPopup.style.top = "50%";
+    worksPopup.style.left = "22%";
+    worksPopup.style.top = "45%";
     worksPopup.style.transform = "translate(-50%, -50%)";
     worksXOffset = 0;
     worksYOffset = 0;
@@ -359,3 +359,32 @@ function stopResize() {
     document.removeEventListener('mousemove', handleResize);
     document.removeEventListener('mouseup', stopResize);
 }
+
+// Make GIF disappear after one loop and fade in business card
+const introGif = document.getElementById('introGif');
+const businessCard = document.getElementById('businessCard');
+const aboutLabel = document.getElementById('aboutLabel');
+const contactsLabel = document.getElementById('contactsLabel');
+const worksLabel = document.getElementById('worksLabel');
+
+const gifDuration = 3190; // 3.19 seconds
+
+// Fade in business card after 1 second
+setTimeout(() => {
+    businessCard.classList.add('show');
+}, 1000);
+
+// Fade in labels after business card is visible (3 seconds total)
+setTimeout(() => {
+    aboutLabel.classList.add('show');
+    contactsLabel.classList.add('show');
+    worksLabel.classList.add('show');
+}, 3000); // Appears at 3 seconds (card finishes fading in)
+
+// GIF fade out
+setTimeout(() => {
+    introGif.classList.add('hidden');
+    setTimeout(() => {
+        introGif.style.display = 'none';
+    }, 2000);
+}, gifDuration);

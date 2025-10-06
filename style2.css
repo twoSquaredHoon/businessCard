@@ -1,10 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+html {
+    background-color: black;
+}
+
 #businessCard {
-    opacity: 100;
+    opacity: 0;
     position: fixed;
     top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
+    transition: opacity 2s ease-in;
+}
+
+#businessCard.show {
+    opacity: 1;
 }
 
 #aboutPopup {
@@ -57,7 +72,7 @@
     padding: 40px;
     border-radius: 0px;
     width: 500px;
-    height: 750px;
+    height: 600px;
     overflow-y: auto;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     cursor: move;
@@ -99,8 +114,8 @@
 #closeWorksButton {
     border-radius: 0px;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 30px;
 }
 
 #aboutButton {
@@ -144,6 +159,9 @@
     top: calc(44% + 171.43px + 20px + 30px + 70px); /* button top + image height + gap */
     transform: translateX(-50%);
     font-size: 25px;
+    color: white;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
 }
 
 #contactsLabel {
@@ -152,6 +170,9 @@
     top: calc(44% + 171.43px + 20px + 30px + 70px);
     transform: translateX(-50%);
     font-size: 25px;
+    color: white;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
 }
 
 #worksLabel {
@@ -160,6 +181,15 @@
     top: calc(44% + 171.43px + 20px + 30px + 70px);
     transform: translateX(-50%);
     font-size: 25px;
+    color: white;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+#aboutLabel.show,
+#contactsLabel.show,
+#worksLabel.show {
+    opacity: 1;
 }
 
 /* Not draggable anymore*/
@@ -167,4 +197,38 @@
     pointer-events: none;
     user-select: none;
     -webkit-user-drag: none;
+}
+
+/*
+#introVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;   
+  object-fit: fill;
+  z-index: -1;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+*/
+
+#introGif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+}
+
+#introGif.hidden {
+    opacity: 0;
+    transition: opacity 3s ease-out;
 }
