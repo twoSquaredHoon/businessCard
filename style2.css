@@ -1,0 +1,170 @@
+#businessCard {
+    opacity: 100;
+    position: fixed;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+}
+
+#aboutPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    border-radius: 0px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    cursor: move;
+    user-select: none;
+}
+
+#closeAboutButton {
+    border-radius: 0px;
+}
+
+#contactsPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    border-radius: 0px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    cursor: move;
+    user-select: none;
+}
+
+#closeContactsButton {
+    border-radius: 0px;
+}
+
+#worksPopup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    transform: none;
+    background: white;
+    padding: 40px;
+    border-radius: 0px;
+    width: 500px;
+    height: 750px;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    cursor: move;
+    user-select: none;
+    min-width: 300px;  /* Minimum size */
+    min-height: 200px;
+}
+
+/* Resize handles */
+.resize-handle {
+    position: absolute;
+    background: transparent;
+}
+
+.resize-right {
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    cursor: ew-resize;
+}
+
+.resize-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    cursor: ns-resize;
+}
+
+.resize-corner {
+    right: 0;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    cursor: nwse-resize;
+}
+
+#closeWorksButton {
+    border-radius: 0px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#aboutButton {
+    padding: 0px 0px;
+    border-radius: 0px;
+    position: fixed;
+    left: calc(50% - 230px);
+    top: calc(44% + 171.43px + 20px);
+    transform: translateX(-50%);
+}
+
+#contactsButton {
+    padding: 0px 0px;
+    border-radius: 0px;
+    position: fixed;
+    left: 50%;
+    top: calc(44% + 171.43px + 20px);
+    transform: translateX(-50%);
+}
+
+#worksButton {
+    padding: 0px 0px;
+    border-radius: 0px;
+    position: fixed;
+    left: calc(50% + 230px);
+    top: calc(44% + 171.43px + 20px);
+    transform: translateX(-50%);
+}
+
+#aboutButton img,
+#contactsButton img,
+#worksButton img {
+    width: 90px;
+    height: 90px;
+    display: block;
+}
+
+#aboutLabel {
+    position: fixed;
+    left: calc(50% - 230px);
+    top: calc(44% + 171.43px + 20px + 30px + 70px); /* button top + image height + gap */
+    transform: translateX(-50%);
+    font-size: 25px;
+}
+
+#contactsLabel {
+    position: fixed;
+    left: 50%;
+    top: calc(44% + 171.43px + 20px + 30px + 70px);
+    transform: translateX(-50%);
+    font-size: 25px;
+}
+
+#worksLabel {
+    position: fixed;
+    left: calc(50% + 230px);
+    top: calc(44% + 171.43px + 20px + 30px + 70px);
+    transform: translateX(-50%);
+    font-size: 25px;
+}
+
+/* Not draggable anymore*/
+#worksPopup img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
